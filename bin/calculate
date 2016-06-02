@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "rpn_calculator"
+
+c = RpnCalculator::Calculator.new
+puts "Howdy! I'm a RPN calculator, go ahead and gimme some inputs. Type 'q' to exit."
+prompt = '> '
+print prompt
+while user_input = gets.chomp
+  break if user_input == 'q'
+  puts c << user_input
+  print prompt
+end
+
+puts "See ya!"
