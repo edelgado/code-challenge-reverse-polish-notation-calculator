@@ -60,6 +60,14 @@ describe RpnCalculator::Calculator do
       end
     end
 
+    context "-20 @" do
+      let(:sequence) { %w(-20 @) }
+
+      it "returns 20" do
+        expect(input_sequence(sequence)).to eq(20)
+      end
+    end
+
   end
 
   def input_sequence(sequence)
